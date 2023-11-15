@@ -18,6 +18,7 @@ requirements:
   build:
     - cmake
     - cpplint
+    - make  # [linux]
     - pybind11
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
