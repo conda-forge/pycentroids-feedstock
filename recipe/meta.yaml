@@ -10,7 +10,7 @@ source:
   sha256: 8bacd9644c1d3fcf7be41fc670c9236a440a7c60d27b58aecc4ac450fdf89915
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: true  # [win]
 
@@ -21,6 +21,7 @@ requirements:
     - make  # [linux]
     - pybind11
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - _openmp_mutex  # [linux]
   host:
