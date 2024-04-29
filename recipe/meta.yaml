@@ -1,5 +1,5 @@
 {% set name = "pycentroids" %}
-{% set version = "0.2.0rc2" %}
+{% set version = "0.2.0rc3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 642109bffe3c2733c06e897b91bc999ea0e960981fea8ba74ddce25e90faf5fe
+  sha256: 8bacd9644c1d3fcf7be41fc670c9236a440a7c60d27b58aecc4ac450fdf89915
 
 build:
-  number: 3
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: true  # [win]
 
@@ -50,5 +50,4 @@ about:
 extra:
   recipe-maintainers:
     - mrakitin
-    - kbeeperez
     - conda-forge/event-model
